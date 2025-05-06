@@ -51,6 +51,22 @@ ul {
   display: flex;
 }
 
+/* Skip Navigation Link */
+.skip-nav-link {
+  border: 2px solid #333333;
+  padding: 8px 20px;
+  padding-left: 40px;
+  border-radius: 40px;
+  position: absolute;
+  left: -240px;
+  top: 80px;
+  transition: 3s;
+}
+.skip-nav-link:focus {
+  left: -20px;
+  transition: 1s;
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;
@@ -171,7 +187,7 @@ ul {
   margin: 0;
 }
 .form-intro {
-  font-size: 1.25;
+  font-size: 1.25rem;
   margin-bottom: 20px;
 }
 .form-section {
@@ -231,10 +247,17 @@ ul {
 }
 
 /* 
-Challenge: Change all font-size properties from px to rem.
+Challenge: Build your very own skip navigation link for our home page!
 
-Here's some helpful conversions for default settings:
-1rem = 16px.
-1.5rem = 24px.
-2rem = 32px.
+Requirements:
+1. Its default state should be visually hidden yet accessible to all keyboard users.
+2. It should utilize the transition property.
+
+
+Steps:
+1. In the HTML, place the link inside the nav, above the logo.
+2. Give the link the class 'skip-nav-link'.
+3. Give the main element the id 'main'
+4. Give the skip nav link an href attribute linked to the main section.
+5. Finally, apply your CSS to the class name 'skip-nav-link'.
 */
