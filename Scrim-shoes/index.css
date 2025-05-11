@@ -1,11 +1,9 @@
-body {
+/* body {
   font-size: 16px;
   color: #2b283a;
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
-
-/* typography */
 
 h1,
 h3 {
@@ -30,8 +28,6 @@ p {
   line-height: 23px;
 }
 
-/* links */
-
 a {
   color: #ef5839;
   text-decoration: underline dotted;
@@ -41,15 +37,6 @@ a:hover,
 a:active {
   color: #d4b44c;
 }
-
-/* 
-Challenge:
-1. Refactor the CSS for these button-style
-   links using two classes on each link
-   element.
-⚠️ Think what to call the new class you
-   will need to create.
-*/
 
 .btn {
   padding: 10px 19px;
@@ -79,8 +66,6 @@ Challenge:
   background-color: #f3e885;
   color: #2b238a;
 }
-
-/* layout */
 
 header,
 section,
@@ -119,4 +104,14 @@ header,
 footer {
   text-align: center;
   color: #5f29a3;
+} */
+
+body {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 570px;
+  margin: 0 auto;
 }
