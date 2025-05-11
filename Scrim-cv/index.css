@@ -1,37 +1,39 @@
-body{
-    margin: 0;
-    color: #333;
-    font-family: 'Roboto';
+body {
+  margin: 0;
+  color: #333;
+  font-family: "Roboto";
 }
 
-section, .ad-container{
-    padding: 20px;
+section,
+.ad-container {
+  padding: 20px;
 }
 
-.ad-container{
-    border: 3px solid midnightblue;
-    border-radius: 4px;
+.ad-container {
+  border: 3px solid midnightblue;
+  border-radius: 4px;
 }
 
-.links-container{
-    padding: 20px;
+.links-container {
+  padding: 20px;
 }
 
-h2, h4{
-    color: midnightblue;
+h2,
+h4 {
+  color: midnightblue;
 }
 
-h2{
-    margin: 0;
+h2 {
+  margin: 0;
 }
 
-h4{
-    margin-bottom:0px
+h4 {
+  margin-bottom: 0px;
 }
 
-ul{
-    margin-top: 10px;
-    line-height: 22px;
+ul {
+  margin-top: 10px;
+  line-height: 22px;
 }
 
 /* 
@@ -45,33 +47,38 @@ requirements" list will be.
 until you have made your guess!
 */
 
-button{
-    padding: 10px 19px;
-    color: midnightblue;
-    font-weight: bold;
-    background-color: skyblue;
-    border-radius: 4.6px;
-    border: 3px solid midnightblue;
+section .ad-container #req-list ul li {
+  color: green; /*113*/
 }
 
-a{
-    margin: 10px;
+body section .ad-container div .general-list li {
+  color: red; /*24*/
 }
 
-.ad-container a{
-    color: limegreen;
-    font-size: 18px;
+button {
+  padding: 10px 19px;
+  color: midnightblue;
+  font-weight: bold;
+  background-color: skyblue;
+  border-radius: 4.6px;
+  border: 3px solid midnightblue;
 }
 
-.links-container a{
-    color: dodgerblue;
-    font-size: 20px;
-    text-decoration: none;
+a {
+  margin: 10px;
 }
 
-.links-container a:hover{
-    color: fuchsia;
+.ad-container a {
+  color: limegreen;
+  font-size: 18px;
 }
 
+.links-container a {
+  color: dodgerblue;
+  font-size: 20px;
+  text-decoration: none;
+}
 
-
+.links-container a:hover {
+  color: fuchsia;
+}
