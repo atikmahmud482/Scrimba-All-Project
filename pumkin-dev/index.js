@@ -6,7 +6,7 @@ const gifsOnlyOption = document.getElementById("gifs-only-option");
 
 emotionRadios.addEventListener("change", highlightCheckedOption);
 
-getImageBtn.addEventListener("click", getMatchingCatsArray);
+getImageBtn.addEventListener("click", renderCat);
 
 function highlightCheckedOption(e) {
   const radios = document.getElementsByClassName("radio");
@@ -29,16 +29,29 @@ function getMatchingCatsArray() {
       } else {
         return cat.emotionTags.includes(selectedEmotion);
       }
-      /*
-Challenge:
-1. Change the .filter() method's function so it returns an 
-   array that only has GIFs if the 'GIFs only' option is 
-   checked. If the 'GIFs only' option is not checked, it
-   should return an array of all matches as it does now.
-*/
     });
     return matchingCatsArray;
   }
+}
+
+function getSingleCatObject() {
+  const catsArray = getMatchingCatsArray();
+
+  if (catsArray.length === 1) {
+    console.log(catsArray[0]);
+  } else {
+    const randomNumber = Math.floor(Math.random() * catsArray.length);
+    console.log(catsArray[randomNumber]);
+    /*
+Challenge:
+1. If catsArray has more than one object, 
+   select an object at random and log it out.
+*/
+  }
+}
+
+function renderCat() {
+  getSingleCatObject(); // temporary
 }
 
 function getEmotionsArray(cats) {
