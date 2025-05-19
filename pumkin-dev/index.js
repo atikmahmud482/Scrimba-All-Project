@@ -1,34 +1,54 @@
-const characters = [
-  {
-    title: "Ninja",
-    emoji: "🥷",
-    powers: ["agility", "stealth", "aggression"],
-  },
-  {
-    title: "Sorcerer",
-    emoji: "🧙",
-    powers: ["magic", "invisibility", "necromancy"],
-  },
-  {
-    title: "Ogre",
-    emoji: "👹",
-    powers: ["power", "stamina", "shapeshifting"],
-  },
-  {
-    title: "Unicorn",
-    emoji: "🦄",
-    powers: ["flight", "power", "purity"],
-  },
-];
+import { catsData } from '/data.js'
 
-for (let character of characters) {
-  for (let power of character.powers) {
-    console.log(power);
-  }
-  /*
+const emotionRadios = document.getElementById('emotion-radios')
+
+emotionRadios.addEventListener('change', highlightCheckedOption)
+
+function highlightCheckedOption(e){
+/*
 Challenge:
-1. Nest a for of inside this for of to iterate over 
-   the powers array for each character. Log out each 
-   power.
-*/
+1. Create an array of all items that have 
+   the "radio" class.
+2. Iterate over the array and remove the 
+   "highlight" class from each one.
+*/ 
+    document.getElementById(e.target.id).parentElement.classList.add('highlight')
 }
+
+function getEmotionsArray(cats){
+    const emotionsArray = []    
+    for (let cat of cats){
+        for (let emotion of cat.emotionTags){
+            if (!emotionsArray.includes(emotion)){
+                emotionsArray.push(emotion)
+            }
+        }
+    }
+    return emotionsArray
+}
+
+
+function renderEmotionsRadios(cats){
+        
+    let radioItems = ``
+    const emotions = getEmotionsArray(cats)
+    for (let emotion of emotions){
+        radioItems += `
+        <div class="radio">
+            <label for="${emotion}">${emotion}</label>
+            <input
+            type="radio"
+            id="${emotion}"
+            value="${emotion}"
+            name="emotions"
+            >
+        </div>`
+    }
+    emotionRadios.innerHTML = radioItems
+}
+
+renderEmotionsRadios(catsData)
+
+
+
+
