@@ -17,19 +17,21 @@ function handleLikeClick(tweetId) {
     return tweet.uuid === tweetId;
   })[0];
 
-  console.log(targetTweetObj);
   /*
 Challenge:
-1. Iterate over tweetsData and use the uuid 
-   saved in tweetId to identify the liked
-   tweet's object. Save that object to a 
-   new const called 'targetTweetObj'.
-⚠️ targetTweetObj should hold an object, NOT
-   an array.
-2. Increment targetTweetObj's 'likes' count 
-   by 1.
-3. Log out targetTweetObj.
+1. Delete the two lines of code marked below and
+   replace them with just one line of code outside 
+   of the if else.
+   Hint: Google the logical NOT operator (!)
 */
+
+  if (targetTweetObj.isLiked) {
+    targetTweetObj.likes--;
+  } else {
+    targetTweetObj.likes++;
+  }
+  targetTweetObj.isLiked = !targetTweetObj.isLiked;
+  render();
 }
 
 function getFeedHtml() {
