@@ -1,11 +1,6 @@
 import { tweetsData } from "./data.js";
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
-/*
-Challenge:
-1. Bring in uuidjs.
-*/
-
 const tweetInput = document.getElementById("tweet-input");
 
 document.addEventListener("click", function (e) {
@@ -53,7 +48,12 @@ function handleReplyClick(replyId) {
 }
 
 function handleTweetBtnClick() {
-  console.log({
+  /*
+Challenge:
+1. Add the new tweet object to 'tweetsData'
+   and make it render at the top of the feed. 
+*/
+  tweetsData.unshift({
     handle: `@Scrimba`,
     profilePic: `images/scrimbalogo.png`,
     likes: 0,
@@ -64,16 +64,7 @@ function handleTweetBtnClick() {
     isRetweeted: false,
     uuid: uuidv4(),
   });
-  /*
-Challenge:
-2. When the Tweet button is clicked, log out an object
-   for a new tweet. Make sure you include the text of 
-   the tweet (how can you get that?) and a unique 
-   identifier using uuidjs.
-   
-   The handle @Scrimba (or whatever you prefer) and 
-   the profile pic scrimbalogo.png can be hard-coded.
-*/
+  render();
 }
 
 function getFeedHtml() {
