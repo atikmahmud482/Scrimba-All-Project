@@ -25,14 +25,24 @@
 // console.log(sentence);
 
 /* Object Distructuring */
-const dreamHoliday = {
-  destination: "Austin, Texas",
-  activity: "visit the Tesla HQ",
-  accommodation: "luxury ranch",
-  companion: "Elon Musk",
-};
+// const dreamHoliday = {
+//   destination: "Austin, Texas",
+//   activity: "visit the Tesla HQ",
+//   accommodation: "luxury ranch",
+//   companion: "Elon Musk",
+// };
 
-const { destination, activity, accommodation, companion } = dreamHoliday;
+// const { destination, activity, accommodation, companion } = dreamHoliday;
 
-console.log(`I would love to go to ${destination} to ${activity}. 
-     I'd sleep in a ${accommodation} and hang out with ${companion} all day.`);
+// console.log(`I would love to go to ${destination} to ${activity}.
+//      I'd sleep in a ${accommodation} and hang out with ${companion} all day.`);
+
+/* The Map Method() */
+const distenceWalkedMilesArr = [22, 34, 43, 45, 12, 76, 56];
+const convertToKilometers = 1.60934;
+function convertMilesToKilometers() {
+  return distenceWalkedMilesArr.map(function (distanceMiles, index) {
+    return `Month ${index}: ${distanceMiles * convertToKilometers}KM`;
+  });
+}
+console.log(convertMilesToKilometers());
