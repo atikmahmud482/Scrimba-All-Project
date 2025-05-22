@@ -131,7 +131,7 @@ Challenge
 2. Do some simple maths to log out the class average. 
 */
 
-import { itemsBoughtArr } from "./itemsBoughtArr.mjs";
+import { itemsBoughtArr } from "./itemsBoughtArr.js";
 
 function calculateTotalCost(itemsBoughtArr, discount = 0) {
   const total = itemsBoughtArr.reduce((total, currentItem) => {
