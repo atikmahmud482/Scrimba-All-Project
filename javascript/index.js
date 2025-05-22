@@ -38,11 +38,16 @@
 //      I'd sleep in a ${accommodation} and hang out with ${companion} all day.`);
 
 /* The Map Method() */
-const distenceWalkedMilesArr = [22, 34, 43, 45, 12, 76, 56];
-const convertToKilometers = 1.60934;
-function convertMilesToKilometers() {
-  return distenceWalkedMilesArr.map(function (distanceMiles, index) {
-    return `Month ${index}: ${distanceMiles * convertToKilometers}KM`;
-  });
-}
-console.log(convertMilesToKilometers());
+// const distenceWalkedMilesArr = [22, 34, 43, 45, 12, 76, 56];
+// const convertToKilometers = 1.60934;
+// function convertMilesToKilometers() {
+//   return distenceWalkedMilesArr.map(function (distanceMiles, index) {
+//     return `Month ${index}: ${distanceMiles * convertToKilometers}KM`;
+//   });
+// }
+// console.log(convertMilesToKilometers());
+
+/* The JoinMethod() */
+const guestsArr = ["Amy", "Clare", "Keith", "Dan"];
+
+console.log(guestsArr.join("🐶"));
