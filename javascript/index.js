@@ -58,7 +58,23 @@
 //     return `Warning! You just spent £${amount}!`
 // }
 
-const getSpendAlert = function (amount) {
-  return `Warning! You just spent £${amount}!`;
+// const getSpendAlert = function (amount) {
+//   return `Warning! You just spent £${amount}!`;
+// };
+// console.log(getSpendAlert(150));
+
+/* Beyond Function Declarations 2: Function Expression Challenge */
+/*
+Challenge:
+    1. Convert this function declaration to a function expression.
+*/
+
+const getTheftAlert = function (numberOfTransactionsHour) {
+  if (numberOfTransactionsHour > 5) {
+    return `You have made ${numberOfTransactionsHour} transactions 
+                in the past hour. We think your card might have been 
+                compromised`;
+  }
 };
-console.log(getSpendAlert(150));
+
+console.log(getTheftAlert(6));
