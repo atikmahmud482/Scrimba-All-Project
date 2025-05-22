@@ -48,6 +48,17 @@
 // console.log(convertMilesToKilometers());
 
 /* The JoinMethod() */
-const guestsArr = ["Amy", "Clare", "Keith", "Dan"];
+// const guestsArr = ["Amy", "Clare", "Keith", "Dan"];
 
-console.log(guestsArr.join("🐶"));
+// console.log(guestsArr.join("🐶"));
+
+/* Beyond Function Declarations 1: Function Expressions */
+
+// function getSpendAlert(amount) {
+//     return `Warning! You just spent £${amount}!`
+// }
+
+const getSpendAlert = function (amount) {
+  return `Warning! You just spent £${amount}!`;
+};
+console.log(getSpendAlert(150));
