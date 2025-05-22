@@ -89,13 +89,13 @@ Challenge:
 
 /* Aside: Arrow functions challenge */
 
-const speedWarning = (speedLimit, speed) => {
-  if (speed > speedLimit) {
-    return `You are going at ${speed} mph!`;
-  }
-};
+// const speedWarning = (speedLimit, speed) => {
+//   if (speed > speedLimit) {
+//     return `You are going at ${speed} mph!`;
+//   }
+// };
 
-console.log(speedWarning(30, 40));
+// console.log(speedWarning(30, 40));
 
 // Challenge
 // 1. Refactor this function so it only warns drivers
@@ -103,3 +103,16 @@ console.log(speedWarning(30, 40));
 // 2. The function now needs to take in two parameters.
 //    The first is the speed limit, the second is the
 //    driver's actual speed.
+
+/* array.reduce() */
+const rainJanuaryByWeek = [10, 20, 0, 122];
+
+const totalRainfallJanuary = rainJanuaryByWeek.reduce(function (
+  total,
+  currentElement
+) {
+  console.log("total: " + total, "currentElement: " + currentElement);
+  return total + currentElement;
+});
+
+console.log(totalRainfallJanuary);
