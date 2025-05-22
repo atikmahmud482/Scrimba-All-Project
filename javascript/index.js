@@ -69,12 +69,14 @@ Challenge:
     1. Convert this function declaration to a function expression.
 */
 
-const getTheftAlert = function (numberOfTransactionsHour) {
-  if (numberOfTransactionsHour > 5) {
-    return `You have made ${numberOfTransactionsHour} transactions 
-                in the past hour. We think your card might have been 
-                compromised`;
-  }
-};
+// const getTheftAlert = function (numberOfTransactionsHour) {
+//   if (numberOfTransactionsHour > 5) {
+//     return `You have made ${numberOfTransactionsHour} transactions
+//                 in the past hour. We think your card might have been
+//                 compromised`;
+//   }
+// };
 
-console.log(getTheftAlert(6));
+// console.log(getTheftAlert(6));
+
+/* Beyond Function Declarations 3: Arrow Functions */
