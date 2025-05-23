@@ -170,17 +170,17 @@ Challenge
 
 // console.log(message);
 
-const playerGuess = 6;
-const correctAnswer = 6;
+// const playerGuess = 6;
+// const correctAnswer = 6;
 
-const message =
-  playerGuess < correctAnswer
-    ? "Too low!"
-    : playerGuess > correctAnswer
-    ? "Too high"
-    : "Exactly right!";
+// const message =
+//   playerGuess < correctAnswer
+//     ? "Too low!"
+//     : playerGuess > correctAnswer
+//     ? "Too high"
+//     : "Exactly right!";
 
-console.log(message);
+// console.log(message);
 
 /*
 Challenge
@@ -188,3 +188,12 @@ Challenge
    letting the player know if their guess was too high, 
    too low, or exactly right.
 */
+
+/* The Rest Parameter */
+function setPermissionLevel(permissionLevel, ...names) {
+  names.forEach((name) => {
+    console.log(`${name} now has ${permissionLevel} level access.`);
+  });
+}
+
+setPermissionLevel("admin", "Dave", "Sally");
