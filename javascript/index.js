@@ -131,13 +131,21 @@ Challenge
 2. Do some simple maths to log out the class average. 
 */
 
-import { itemsBoughtArr } from "./itemsBoughtArr.mjs";
+// import { itemsBoughtArr } from "./itemsBoughtArr.js";
 
-function calculateTotalCost(itemsBoughtArr, discount = 0) {
-  const total = itemsBoughtArr.reduce((total, currentItem) => {
-    return total + currentItem.priceUSD;
-  }, 0);
-  return total - discount;
-}
+// function calculateTotalCost(itemsBoughtArr, discount = 0) {
+//   const total = itemsBoughtArr.reduce((total, currentItem) => {
+//     return total + currentItem.priceUSD;
+//   }, 0);
+//   return total - discount;
+// }
 
-console.log(calculateTotalCost(itemsBoughtArr, 10));
+// console.log(calculateTotalCost(itemsBoughtArr, 10));
+
+/* The Ternary Operator */
+const exerciseTimeMins = 30;
+
+const message =
+  exerciseTimeMins < 30 ? "You need to try harder!" : "Doing good!";
+
+console.log(message);
