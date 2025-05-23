@@ -151,13 +151,21 @@ Challenge
 // console.log(message);
 
 /* The Ternary Operator for Complex Conditionals */
-const exerciseTimeMins = 40;
+// const exerciseTimeMins = 40;
 
-const message =
-  exerciseTimeMins < 30
-    ? "You need to try harder!"
-    : exerciseTimeMins < 60
-    ? "Doing good!"
-    : "Excellent!";
+// const message =
+//   exerciseTimeMins < 30
+//     ? "You need to try harder!"
+//     : exerciseTimeMins < 60
+//     ? "Doing good!"
+//     : "Excellent!";
+
+// console.log(message);
+
+/* Ternary Operator Challenge */
+const playerGuess = 3;
+const correctAnswer = 6;
+
+let message = playerGuess === correctAnswer ? "Correct!" : "Wrong!";
 
 console.log(message);
