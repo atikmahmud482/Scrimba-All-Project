@@ -221,10 +221,24 @@ Challenge
 // console.log(eventMenu);
 
 /* Short-circuiting with OR (||) */
-const jobHunter = {
-  name: "Tom Chant",
-  jobSearchArea: "Europe",
+// const jobHunter = {
+//   name: "Tom Chant",
+//   jobSearchArea: "Europe",
+// };
+
+// const workLocation = jobHunter.jobSearchArea || "Worldwide";
+// console.log(`${jobHunter.name}'s work location is ${workLocation}`);
+
+/* Short-circuiting with AND (&&) */
+const user = {
+  userName: "Tom",
+  role: "admin",
 };
 
-const workLocation = jobHunter.jobSearchArea || "Worldwide";
-console.log(`${jobHunter.name}'s work location is ${workLocation}`);
+user.role === "admin" && greetAdmin();
+
+function greetAdmin() {
+  console.log("Hi Admin!");
+}
+
+// console.log(user.role === 'admin')
