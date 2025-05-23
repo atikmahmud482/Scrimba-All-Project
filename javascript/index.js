@@ -200,22 +200,31 @@ Challenge
 
 /* Spread Syntax (...) */
 
-const lunchMenu = [
-  "Greek Salad",
-  "Open Sandwich",
-  "Parsnip Soup",
-  "Flatbread and Dip",
-];
-const dinnerMenu = ["Lasagne", "Strogonoff", "Tagine", "Katsu Curry"];
-const sweetMenu = [
-  "Mixed Berry Ice Cream",
-  "Chocolate Brownie",
-  "Orange Cheesecake",
-];
+// const lunchMenu = [
+//   "Greek Salad",
+//   "Open Sandwich",
+//   "Parsnip Soup",
+//   "Flatbread and Dip",
+// ];
+// const dinnerMenu = ["Lasagne", "Strogonoff", "Tagine", "Katsu Curry"];
+// const sweetMenu = [
+//   "Mixed Berry Ice Cream",
+//   "Chocolate Brownie",
+//   "Orange Cheesecake",
+// ];
 
-// console.log(...lunchMenu)
-// Greek Salad,"Open Sandwich","Parsnip Soup","Flatbread and Dip"
+// // console.log(...lunchMenu)
+// // Greek Salad,"Open Sandwich","Parsnip Soup","Flatbread and Dip"
 
-const eventMenu = [...lunchMenu, ...dinnerMenu, ...sweetMenu];
+// const eventMenu = [...lunchMenu, ...dinnerMenu, ...sweetMenu];
 
-console.log(eventMenu);
+// console.log(eventMenu);
+
+/* Short-circuiting with OR (||) */
+const jobHunter = {
+  name: "Tom Chant",
+  jobSearchArea: "Europe",
+};
+
+const workLocation = jobHunter.jobSearchArea || "Worldwide";
+console.log(`${jobHunter.name}'s work location is ${workLocation}`);
