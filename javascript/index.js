@@ -163,9 +163,28 @@ Challenge
 // console.log(message);
 
 /* Ternary Operator Challenge */
-const playerGuess = 3;
+// const playerGuess = 3;
+// const correctAnswer = 6;
+
+// let message = playerGuess === correctAnswer ? "Correct!" : "Wrong!";
+
+// console.log(message);
+
+const playerGuess = 6;
 const correctAnswer = 6;
 
-let message = playerGuess === correctAnswer ? "Correct!" : "Wrong!";
+const message =
+  playerGuess < correctAnswer
+    ? "Too low!"
+    : playerGuess > correctAnswer
+    ? "Too high"
+    : "Exactly right!";
 
 console.log(message);
+
+/*
+Challenge
+1. Now improve the functionality of this code by 
+   letting the player know if their guess was too high, 
+   too low, or exactly right.
+*/
