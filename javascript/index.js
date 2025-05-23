@@ -190,10 +190,32 @@ Challenge
 */
 
 /* The Rest Parameter */
-function setPermissionLevel(permissionLevel, ...names) {
-  names.forEach((name) => {
-    console.log(`${name} now has ${permissionLevel} level access.`);
-  });
-}
+// function setPermissionLevel(permissionLevel, ...names) {
+//   names.forEach((name) => {
+//     console.log(`${name} now has ${permissionLevel} level access.`);
+//   });
+// }
 
-setPermissionLevel("admin", "Dave", "Sally");
+// setPermissionLevel("admin", "Dave", "Sally");
+
+/* Spread Syntax (...) */
+
+const lunchMenu = [
+  "Greek Salad",
+  "Open Sandwich",
+  "Parsnip Soup",
+  "Flatbread and Dip",
+];
+const dinnerMenu = ["Lasagne", "Strogonoff", "Tagine", "Katsu Curry"];
+const sweetMenu = [
+  "Mixed Berry Ice Cream",
+  "Chocolate Brownie",
+  "Orange Cheesecake",
+];
+
+// console.log(...lunchMenu)
+// Greek Salad,"Open Sandwich","Parsnip Soup","Flatbread and Dip"
+
+const eventMenu = [...lunchMenu, ...dinnerMenu, ...sweetMenu];
+
+console.log(eventMenu);
