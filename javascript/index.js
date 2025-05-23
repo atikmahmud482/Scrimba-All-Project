@@ -143,9 +143,21 @@ Challenge
 // console.log(calculateTotalCost(itemsBoughtArr, 10));
 
 /* The Ternary Operator */
-const exerciseTimeMins = 30;
+// const exerciseTimeMins = 30;
+
+// const message =
+//   exerciseTimeMins < 30 ? "You need to try harder!" : "Doing good!";
+
+// console.log(message);
+
+/* The Ternary Operator for Complex Conditionals */
+const exerciseTimeMins = 40;
 
 const message =
-  exerciseTimeMins < 30 ? "You need to try harder!" : "Doing good!";
+  exerciseTimeMins < 30
+    ? "You need to try harder!"
+    : exerciseTimeMins < 60
+    ? "Doing good!"
+    : "Excellent!";
 
 console.log(message);
