@@ -18,3 +18,12 @@ const sum = nums.reduce((acc, n) => acc + n, 0);
 // console.log(doubled);
 // console.log(even);
 // console.log(sum);
+
+const obj = {
+  name: "atik",
+  age: 24,
+  sayName() {
+    console.log(this.name);
+  },
+};
+obj.sayName();
