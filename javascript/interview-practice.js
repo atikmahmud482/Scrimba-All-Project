@@ -19,6 +19,7 @@ const sum = nums.reduce((acc, n) => acc + n, 0);
 // console.log(even);
 // console.log(sum);
 
+/* this keyword */
 const obj = {
   name: "atik",
   age: 24,
@@ -26,4 +27,9 @@ const obj = {
     console.log(this.name);
   },
 };
-obj.sayName();
+// obj.sayName();
+
+function isPalindrome(str) {
+  return str === str.split("").reverse().join("");
+}
+console.log(isPalindrome("Atik"));
