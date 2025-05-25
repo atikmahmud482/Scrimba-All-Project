@@ -365,17 +365,43 @@ Challenge
 // console.log(sarah);
 
 /* Debugging: try...catch */
-function addTouristSurcharge(payment) {
-  try {
-    if (typeof payment === "number") {
-      console.log(payment + 10);
-    } else {
-      throw new ReferenceError("payment is not a number");
-    }
-  } catch (err) {
-    console.error("Error: " + err);
+// function addTouristSurcharge(payment) {
+//   try {
+//     if (typeof payment === "number") {
+//       console.log(payment + 10);
+//     } else {
+//       throw new ReferenceError("payment is not a number");
+//     }
+//   } catch (err) {
+//     console.error("Error: " + err);
+//   }
+// }
+
+// addTouristSurcharge(60);
+// addTouristSurcharge("60");
+
+/* Constructor Functions to Classes Challenge */
+/*
+Challenge:
+Rebuild this constructor function as a class.
+*/
+
+class Character {
+  constructor(name) {
+    this.name = name;
+    this.collectedItemsArr = [];
+  }
+
+  addItem(item) {
+    this.collectedItemsArr.push(item);
+    console.log(`${this.name} now has: ${this.collectedItemsArr.join(", ")}`);
   }
 }
 
-addTouristSurcharge(60);
-addTouristSurcharge("60");
+const wizard = new Character("Merlin");
+const witch = new Character("Hermione");
+wizard.addItem("a wand");
+wizard.addItem("a map");
+wizard.addItem("a rope");
+witch.addItem("a map");
+witch.addItem("a rope");
