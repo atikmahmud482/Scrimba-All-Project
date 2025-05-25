@@ -295,23 +295,53 @@ Challenge
 // checkUsername();
 
 /* Objects with Methods and 'this' */
-const gamer = {
-  name: "Dave",
-  score: 0,
-  incrementScore: function () {
-    this.score++;
-  },
-};
+// const gamer = {
+//   name: "Dave",
+//   score: 0,
+//   incrementScore: function () {
+//     this.score++;
+//   },
+// };
 
-const gamer1 = {
-  name: "Sarah",
-  score: 0,
-  incrementScore: function () {
-    this.score++;
-  },
-};
+// const gamer1 = {
+//   name: "Sarah",
+//   score: 0,
+//   incrementScore: function () {
+//     this.score++;
+//   },
+// };
 
-gamer.incrementScore();
-gamer1.incrementScore();
-console.log(gamer);
-console.log(gamer1);
+// gamer.incrementScore();
+// gamer1.incrementScore();
+// console.log(gamer);
+// console.log(gamer1);
+
+// const gamer = {
+//     name: 'Dave',
+//     score: 0,
+//     incrementScore: function(){
+//         this.score++
+//     }
+// }
+
+/* Objects to Constructor Functions */
+function Gamer(name) {
+  this.name = name;
+  this.score = 0;
+  this.incrementScore = function () {
+    this.score++;
+  };
+}
+
+const dave = new Gamer("Dave");
+const sarah = new Gamer("Sarah");
+const kerry = new Gamer("Kerry");
+dave.incrementScore();
+sarah.incrementScore();
+sarah.incrementScore();
+kerry.incrementScore();
+kerry.incrementScore();
+kerry.incrementScore();
+console.log(dave);
+console.log(sarah);
+console.log(kerry);
