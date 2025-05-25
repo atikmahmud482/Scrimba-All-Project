@@ -325,23 +325,41 @@ Challenge
 // }
 
 /* Objects to Constructor Functions */
-function Gamer(name) {
-  this.name = name;
-  this.score = 0;
-  this.incrementScore = function () {
+// function Gamer(name) {
+//   this.name = name;
+//   this.score = 0;
+//   this.incrementScore = function () {
+//     this.score++;
+//   };
+// }
+
+// const dave = new Gamer("Dave");
+// const sarah = new Gamer("Sarah");
+// const kerry = new Gamer("Kerry");
+// dave.incrementScore();
+// sarah.incrementScore();
+// sarah.incrementScore();
+// kerry.incrementScore();
+// kerry.incrementScore();
+// kerry.incrementScore();
+// console.log(dave);
+// console.log(sarah);
+// console.log(kerry);
+
+/* Constructor Functions to Classes */
+class Gamer {
+  constructor(name, score) {
+    this.name = name;
+    this.score = score;
+  }
+
+  incrementScore() {
     this.score++;
-  };
+  }
 }
 
-const dave = new Gamer("Dave");
-const sarah = new Gamer("Sarah");
-const kerry = new Gamer("Kerry");
+const dave = new Gamer("Dave", 0);
+const sarah = new Gamer("Sarah", 0);
 dave.incrementScore();
-sarah.incrementScore();
-sarah.incrementScore();
-kerry.incrementScore();
-kerry.incrementScore();
-kerry.incrementScore();
 console.log(dave);
 console.log(sarah);
-console.log(kerry);
