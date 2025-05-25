@@ -413,14 +413,14 @@ const checkButton = document.getElementById("btn-check");
 
 //set minimum drinking and driving ages for a jurisdiction
 const minDrinkAge = 21;
-const minDriveAge = 16;
+const minDriveAge = 18;
 
 //check button click event listener
 checkButton.addEventListener("click", function () {
   let message = "";
   const age = ageInput.value;
   // Age is below the minDrinkAge and minDriveAge
-  if (age > minDrinkAge && age > minDriveAge) {
+  if (age < minDrinkAge && age < minDriveAge) {
     message = `I'm sorry, you cannot drink or drive ⛔`;
     // Relevant to countries where minDrinkAge is less than minDriveAge
   } else if (age >= minDrinkAge && age < minDriveAge) {
