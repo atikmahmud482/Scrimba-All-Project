@@ -282,14 +282,36 @@ Challenge
 // console.log(`Copyright ${dateSnapshot.getFullYear().toString()}`);
 
 /* The Error() Constructor */
-function checkUsername(userName) {
-  if (userName) {
-    console.log(userName);
-  } else {
-    console.log("I execute");
-    throw new Error("No username provided");
-    console.log("I do not execute");
-  }
-}
+// function checkUsername(userName) {
+//   if (userName) {
+//     console.log(userName);
+//   } else {
+//     console.log("I execute");
+//     throw new Error("No username provided");
+//     console.log("I do not execute");
+//   }
+// }
 
-checkUsername();
+// checkUsername();
+
+/* Objects with Methods and 'this' */
+const gamer = {
+  name: "Dave",
+  score: 0,
+  incrementScore: function () {
+    this.score++;
+  },
+};
+
+const gamer1 = {
+  name: "Sarah",
+  score: 0,
+  incrementScore: function () {
+    this.score++;
+  },
+};
+
+gamer.incrementScore();
+gamer1.incrementScore();
+console.log(gamer);
+console.log(gamer1);
