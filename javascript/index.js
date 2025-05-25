@@ -347,19 +347,35 @@ Challenge
 // console.log(kerry);
 
 /* Constructor Functions to Classes */
-class Gamer {
-  constructor(name, score) {
-    this.name = name;
-    this.score = score;
-  }
+// class Gamer {
+//   constructor(name, score) {
+//     this.name = name;
+//     this.score = score;
+//   }
 
-  incrementScore() {
-    this.score++;
+//   incrementScore() {
+//     this.score++;
+//   }
+// }
+
+// const dave = new Gamer("Dave", 0);
+// const sarah = new Gamer("Sarah", 0);
+// dave.incrementScore();
+// console.log(dave);
+// console.log(sarah);
+
+/* Debugging: try...catch */
+function addTouristSurcharge(payment) {
+  try {
+    if (typeof payment === "number") {
+      console.log(payment + 10);
+    } else {
+      throw new ReferenceError("payment is not a number");
+    }
+  } catch (err) {
+    console.error("Error: " + err);
   }
 }
 
-const dave = new Gamer("Dave", 0);
-const sarah = new Gamer("Sarah", 0);
-dave.incrementScore();
-console.log(dave);
-console.log(sarah);
+addTouristSurcharge(60);
+addTouristSurcharge("60");
