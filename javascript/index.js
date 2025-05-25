@@ -278,5 +278,18 @@ Challenge
 // console.log(selectItem("biscuits"));
 
 /* Constructors: Date() */
-const dateSnapshot = new Date();
-console.log(`Copyright ${dateSnapshot.getFullYear().toString()}`);
+// const dateSnapshot = new Date();
+// console.log(`Copyright ${dateSnapshot.getFullYear().toString()}`);
+
+/* The Error() Constructor */
+function checkUsername(userName) {
+  if (userName) {
+    console.log(userName);
+  } else {
+    console.log("I execute");
+    throw new Error("No username provided");
+    console.log("I do not execute");
+  }
+}
+
+checkUsername();
