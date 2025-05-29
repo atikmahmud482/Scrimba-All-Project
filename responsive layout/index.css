@@ -51,7 +51,8 @@ Challenge:
   }
 
   .environment {
-    grid-column: 7 / 10;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
   }
 
   .nasa {
@@ -59,7 +60,8 @@ Challenge:
   }
 
   .physics {
-    grid-column: 1 / 4;
+    grid-row: 1 /2;
+    grid-column: 7 / 10;
   }
 
   .health {
