@@ -4,9 +4,22 @@ body {
   padding: 0;
 }
 
+/* 
+Challenge:
+   1. Finish mapping out these elements using 
+      their grid-areas.
+
+ */
+
 .grid-container {
   display: grid;
   grid-template: repeat(5, 1fr) / repeat(12, 1fr);
+  grid-template-areas:
+    "head head head head head head head head head head head head"
+    "nav nav main main main main main main main aside aside aside"
+    "nav nav main main main main main main main aside aside aside"
+    "nav nav main main main main main main main aside aside aside"
+    "foot foot foot foot foot foot foot foot foot foot foot foot";
 }
 
 .grid-item {
@@ -19,39 +32,26 @@ body {
 }
 
 header {
+  grid-area: head;
   background-color: palegoldenrod;
-  /* grid-column-start: 1;
-    grid-column-end: 13; */
-  grid-column: 1 / -1;
 }
 
 nav {
+  grid-area: nav;
   background-color: lightcoral;
-  grid-column: 1 / 3;
-  grid-row: 2 / 5;
 }
 
-/* 
-Challenge:
-   1. Add the necessary grid-column and grid-row 
-   lines to complete this layout. Only write 
-   the CSS you need - let the algorithm do the rest. 
-
- */
-
 main {
+  grid-area: main;
   background-color: lightgreen;
-  grid-column: 3 / 10;
-  grid-row: 2 / 5;
 }
 
 aside {
+  grid-area: aside;
   background-color: lightgray;
-  grid-column: 10 / -1;
-  grid-row: 2 / 5;
 }
 
 footer {
+  grid-area: foot;
   background-color: gold;
-  grid-column: 1 / -1;
 }
