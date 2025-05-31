@@ -45,25 +45,34 @@ console.log the results
  
  Log the 5 items to the console
  */
+let postsArray = [];
+const titleInput = document.getElementById("post-title");
+const bodyInput = document.getElementById("post-body");
+const form = document.getElementById("new-post");
+
+function renderPosts() {
+  let html = "";
+  for (let post of postsArray) {
+    html += `
+            <h3>${post.title}</h3>
+            <p>${post.body}</p>
+            <hr />
+        `;
+  }
+  document.getElementById("blog-list").innerHTML = html;
+}
+
 fetch("https://apis.scrimba.com/jsonplaceholder/posts")
   .then((res) => res.json())
   .then((data) => {
-    const postsArr = data.slice(0, 5);
-    let html = "";
-    for (let post of postsArr) {
-      html += `
-                <h3 class="blah">${post.title}</h3>
-                <p>${post.body}</p>
-                <hr />
-            `;
-    }
-    document.getElementById("blog-list").innerHTML = html;
+    postsArray = data.slice(0, 5);
+    renderPosts();
   });
 
-document.getElementById("new-post").addEventListener("submit", function (e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
-  const postTitle = document.getElementById("post-title").value;
-  const postBody = document.getElementById("post-body").value;
+  const postTitle = titleInput.value;
+  const postBody = bodyInput.value;
   const data = {
     title: postTitle,
     body: postBody,
@@ -80,14 +89,13 @@ document.getElementById("new-post").addEventListener("submit", function (e) {
   fetch("https://apis.scrimba.com/jsonplaceholder/posts", options)
     .then((res) => res.json())
     .then((post) => {
+      postsArray.unshift(post);
+      renderPosts();
       /**
-       * Challenge: Update the DOM with the new blog entry
+       * Challenge: clear the form out!
        */
-      document.getElementById("blog-list").innerHTML = `
-                <h3 class="blah">${post.title}</h3>
-                <p>${post.body}</p>
-                <hr />
-                ${document.getElementById("blog-list").innerHTML}
-            `;
+      titleInput.value = "";
+      bodyInput.value = "";
+      // form.reset()
     });
 });
