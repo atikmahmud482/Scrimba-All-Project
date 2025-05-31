@@ -9,9 +9,9 @@
  * Log the response data to the console
  */
 
-fetch("https://apis.scrimba.com/jsonplaceholder/posts")
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+// fetch("https://apis.scrimba.com/jsonplaceholder/posts")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
 
 /**
 Challenge: 
@@ -25,9 +25,9 @@ This time however, explicitly set the request method to "GET"
 console.log the results
 */
 
-fetch("https://apis.scrimba.com/jsonplaceholder/todos", { method: "GET" })
-  .then((res) => res.json())
-  .then((data) => console.log(data));
+// fetch("https://apis.scrimba.com/jsonplaceholder/todos", { method: "GET" })
+//   .then((res) => res.json())
+//   .then((data) => console.log(data));
 
 // BlogSpace - GET first 5 blog posts
 
@@ -50,5 +50,13 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
   .then((res) => res.json())
   .then((data) => {
     const postsArr = data.slice(0, 5);
-    console.log(postsArr);
+    let html = "";
+    for (let post of postsArr) {
+      html += `
+                <h3>${post.title}</h3>
+                <p>${post.body}</p>
+                <hr />
+            `;
+    }
+    document.getElementById("blog-list").innerHTML = html;
   });
