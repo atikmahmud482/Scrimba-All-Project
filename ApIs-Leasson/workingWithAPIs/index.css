@@ -19,5 +19,18 @@ nav > h3 {
 }
 
 #blog-list {
-  padding: 30px 10px 10px;
+  padding: 10px;
 }
+
+form {
+  padding: 60px 10px 10px;
+}
+
+/* 
+Challenge: our form is hideous! Make it less hideous :P
+
+* Lay out the elements in a nicer way, maybe vertically. 
+  (CSS Grid or Flexbox should make this easy)
+* Add some background color to separate it from the posts
+* Style the button however you'd like.
+*/
