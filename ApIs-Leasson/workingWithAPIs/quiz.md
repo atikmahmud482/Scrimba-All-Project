@@ -455,3 +455,8 @@ document.getElementById("new-deck").addEventListener("click", handleClick)
 // })
 
 // console.log(peopleWithPets)
+
+<!-- Promises -->
+
+const promise = fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
+promise.then(function() {})
