@@ -17,15 +17,14 @@ document.getElementById("draw-cards").addEventListener("click", () => {
     .then((data) => {
       console.log(data.cards);
       document.getElementById("cards").innerHTML = `
-                <img src=${data.cards[0].image} />
-                <img src=${data.cards[1].image} />
+                <img src=${data.cards[0].image} class="card" />
+                <img src=${data.cards[1].image} class="card" />
             `;
     });
 });
 /**
  * Challenge:
  *
- * Display the images of the 2 cards you drew in the browser.
- * Probably best to use `innerHTML` to insert a couple <img> elements
- * on the page.
+ * Create a spot in the HTML for the cards to be placed in.
+ * Typical playing cards have a 5:7 ratio (width-to-height).
  */
