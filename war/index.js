@@ -86,10 +86,20 @@ function determineCardWinner(card1, card2) {
   }
 }
 
-// async function handleClick() {
-//     const response = await fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
-//     const data = await res.json()
-//     remainingText.textContent = `Remaining cards: ${data.remaining}`
-//     deckId = data.deck_id
-//     console.log(deckId)
-// }
+/* 
+Topic Covered: 
+callbacks
+ * functions as first-class objects
+ * Built own .filter()
+ 
+promises 
+ * Three states(pending, fulfilled, rejected)
+ * .then and Chaining
+
+War 
+ *Deck of Cards API
+ *Styling & Layout
+ * Algorithm practice
+ * UX improvements
+ * Async/Await
+*/
