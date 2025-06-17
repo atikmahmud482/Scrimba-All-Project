@@ -51,25 +51,39 @@ navigator.geolocation.getCurrentPosition((position) => {
       return res.json();
     })
     .then((data) => {
-      // console.log(data)
+      console.log(data);
       const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
       document.getElementById("weather").innerHTML = `
                 <img src=${iconUrl} />
+                <p>${Math.round(data.main.temp)}º</p>
+                <p>${data.name}</p>
             `;
     })
     .catch((err) => console.error(err));
 });
 
 /**
- * Challenge: Display the weather icon as an <img />
- * inside the <div id="weather">
- *
- * This site shows an example URL for the icon:
- * https://openweathermap.org/weather-conditions
- *
- * Note: the weather icon is found instead data.weather, which is
- * an array of weather for that area. You can just access the first
- * item in that array to get the icon ID.
+ * Challenge: Display the temperature (rounded to the nearest degree)
+ * and the city. Don't worry about the layout for now.
  */
 
-// http://openweathermap.org/img/wn/01d@2x.png
+// base: "stations"
+// clouds: {all: 1}
+// cod: 200
+// coord: {lon: -111.9162, lat: 40.5269}
+// dt: 1623180787
+// id: 5780557
+// main:
+// feels_like: 80.56
+// humidity: 17
+// pressure: 1009
+// temp: 83.17
+// temp_max: 88
+// temp_min: 78.62
+// __proto__: Object
+// name: "Riverton"
+// sys: {type: 2, id: 2003861, country: "US", sunrise: 1623153431, sunset: 1623207400}
+// timezone: -21600
+// visibility: 10000
+// weather: [{…}]
+// wind: {speed: 11.01, deg: 167, gust: 21.99}
