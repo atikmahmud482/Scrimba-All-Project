@@ -3,44 +3,57 @@ body {
   margin: 0;
   padding: 0;
 }
-
 body {
-  height: 100vh;
+  background: #212527;
+  color: #9fb2b9;
+}
+
+.container {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  place-items: center;
-  background: lightblue;
-  grid-gap: 2em;
-}
-
-.card {
-  background: white;
-}
-span {
-  height: 100px;
-  display: block;
   width: 100%;
-  background: #71a6b8;
+  margin: 2em auto 0;
 }
-
-p.date {
-  text-align: center;
-  font-size: 0.7em;
-  text-transform: uppercase;
+.card {
+  background: #337590;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  border-radius: 1em;
+  margin-bottom: 2em;
 }
+p,
 h3 {
   margin: 0;
 }
-p.desc {
-  font-size: 0.9em;
+h3 {
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
+span {
+  width: 5em;
+  height: 5em;
+  background: #75a2b8;
+  border-radius: 50%;
 }
 
 /* 
-   Use the following properties
-   to fix the alignment and white
-   space issues on the rulesets
-   below this comment.
+
+   Your fixes below:
    
-   margin, padding, text-align
+   My solution included using the following properties:  
+   width, background, padding, margin,
+   text-transform, font-size, letter-spacing & color
    
 */
+
+.container {
+}
+
+.card {
+}
+
+p.date {
+}
+
+h3 {
+}
