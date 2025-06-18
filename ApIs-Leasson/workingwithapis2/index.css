@@ -1,79 +1,70 @@
-* {
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  background: no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 0px 0px 20px #242424;
-}
-
-main {
-  padding: 15px;
+  background: #014bcb;
+  display: grid;
+  grid-template-columns: 10% auto;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  color: white;
+  font-family: "Nunito";
+  grid-gap: 0.5em;
 }
-
-div.top {
-  display: flex;
-  justify-content: space-between;
+sidebar {
+  background: #1d3154;
 }
-
-h1.time {
-  text-align: center;
-  font-size: 5rem;
+.content {
+  background: #6c22ff;
+  padding: 0.5em;
+  width: 50%;
+  margin-right: 2em;
+  border-radius: 0.8em;
 }
-
-div#crypto {
-  font-size: 1.3rem;
+h1 {
+  margin-left: 1em;
+  font-size: 1em;
 }
-
-div#crypto > p {
+h3 {
   margin: 0;
+  font-size: 0.9em;
+  color: #ff69f5;
 }
 
-div#crypto-top {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+li {
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+}
+span {
+  float: right;
 }
 
-div#crypto-top > span {
-  margin-left: 10px;
+/*  
+    Your Fixes Below
+    
+    Please keep the same background color
+    and the same sidebar background color.
+    
+*/
+
+body {
+  grid-gap: 2em; /* Improve the white space */
 }
 
-div#weather {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-self: flex-start;
-  margin-top: -20px;
+.content {
+  background: #0044b9; /* Improve the color/contrast */
+  padding: auto; /* Improve the white space */
 }
 
-div#weather > img {
-  width: 70px;
-}
-
-p.weather-city {
-  width: 100%;
-  text-align: right;
-  margin: 0;
-  margin-top: -10px;
-  font-size: 1.2rem;
-}
-
-p.weather-temp {
-  margin: 0;
-  font-size: 1.7rem;
-  margin-left: -10px;
-}
-
-p#author {
-  font-size: 1rem;
+h1 {
+  margin-left: 1em; /* Improve the alignment */
+  font-size: auto; /* Improve the visual hierarchy */
 }
