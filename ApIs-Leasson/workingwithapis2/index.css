@@ -61,10 +61,10 @@ body {
 
 .content {
   background: #0044b9; /* Improve the color/contrast */
-  padding: auto; /* Improve the white space */
+  padding: 1.5em; /* Improve the white space */
 }
 
 h1 {
-  margin-left: 1em; /* Improve the alignment */
-  font-size: auto; /* Improve the visual hierarchy */
+  margin-left: 0; /* Improve the alignment */
+  font-size: 2.3em; /* Improve the visual hierarchy */
 }
